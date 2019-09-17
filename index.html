@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Team Hover Effect</title>
+    <style media="screen">
+    body {
+      background-color:  #e5e5e5;
+    }
+    .our-team{
+      text-align: center;
+      transition: all 0.5s ease 0s;
+  }
+
+  .our-team:hover{
+      box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  }
+
+  .our-team .pic{
+      overflow: hidden;
+      position: relative;
+  }
+
+  .our-team .pic:before,
+  .our-team .pic:after{
+      content: "";
+      width: 200%;
+      height: 80%;
+      background: rgba(38,37,37,0.8);
+      position: absolute;
+      top: -100%;
+      left: -4%;
+      transform: rotate(45deg);
+      transition: all 0.5s ease 0s;
+  }
+
+  .our-team .pic:after{
+      background: rgba(8,75,77,0.8);
+      top: auto;
+      left: auto;
+      bottom: -100%;
+      right: -4%;
+  }
+
+  .our-team:hover .pic:before{ top: 0; }
+
+  .our-team:hover .pic:after{ bottom: 0; }
+
+  .our-team .pic img{
+      width: 100%;
+      height: auto;
+  }
+
+  .our-team .social{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      position: absolute;
+      bottom: 45%;
+      left: 0;
+      opacity: 0;
+      z-index: 2;
+      transition: all 0.5s ease 0.3s;
+  }
+
+  .our-team:hover .social{ opacity: 1; }
+
+  .our-team .social li{ display: inline-block; }
+
+  .our-team .social li a{
+      display: block;
+      width: 40px;
+      height: 40px;
+      text-decoration: none;
+      line-height: 40px;
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px;
+      position: relative;
+      transition: all 0.3s ease 0s;
+  }
+
+  .our-team .social li a:after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #db162f;
+      border-radius: 0 20px 20px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s ease 0s;
+  }
+
+  .our-team .social li a:hover:after{ transform: rotate(180deg); }
+
+  .our-team .team-content{ padding: 20px; }
+
+  .our-team .title{
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #047168;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+  }
+
+  .our-team .post{
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      color: #707070;
+      text-transform: capitalize;
+  }
+
+  @media only screen and (max-width: 990px){
+      .our-team{ margin-bottom: 30px; }
+  }
+    </style>
+
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+         <div class="col-md-4 col-sm-6">
+             <div class="our-team">
+                 <div class="pic">
+                     <img src="srt.png">
+                     <ul class="social">
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                     </ul>
+                 </div>
+                 <div class="team-content">
+                     <h3 class="title">SR Tutorials</h3>
+                     <span class="post">Web Developer</span>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4 col-sm-6">
+             <div class="our-team">
+                 <div class="pic">
+                     <img src="sarvesh.png">
+                     <ul class="social">
+                         <li><a href="#" class="fa fa-facebook"> </a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                     </ul>
+                 </div>
+                 <div class="team-content">
+                     <h3 class="title">Sarvesh Mishra</h3>
+                     <span class="post">Web Designer</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </div>
+
+  </body>
+</html>
